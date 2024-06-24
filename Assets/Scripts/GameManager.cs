@@ -18,12 +18,10 @@ public class GameManager : MonoBehaviour
     public GameObject roundPopup;
     public GameObject roundPopupNumText;
     Text roundPopupText;
-    Shooter shoot;
 
     void Start ()
 	{
         GameObject shooter = GameObject.Find("Main Camera");
-        shoot = shooter.GetComponent<Shooter>();
         roundPopupText = roundPopupNumText.GetComponent<Text>();
 
 		GameManager.OnDuckMiss += FlyAwaySkyOn;
@@ -48,13 +46,13 @@ public class GameManager : MonoBehaviour
 
     public void DisplayRoundNumOn()
     {
-        roundPopupText.text = "ROUND\n" + StaticVars.roundNum;
+        roundPopupText.text = "ROUND\n";
         roundPopup.SetActive(true);
     }
 
     public void DisplayRoundNumOff()
     {
-        roundPopupText.text = "ROUND\n" + StaticVars.roundNum;
+        roundPopupText.text = "ROUND\n";
         roundPopup.SetActive(false);
     }
 }
