@@ -228,6 +228,11 @@ public class Shooter : MonoBehaviour
         }
         else
         {
+//            source.PlayOneShot(lose, 1);
+//            StaticVars.roundNum = 1;
+//            roundText.text = "R = " + StaticVars.roundNum.ToString();
+//			score = 0;
+//			scoreTxt.text = score.ToString().PadLeft(6, '0');
 			Application.LoadLevel("GameOver");
         }
         duckShotNum = 0;
